@@ -1,13 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Required for GitHub Pages static export
   output: 'export',
   trailingSlash: true,
-  basePath: '',
-  assetPrefix: '',
-
-  // Keep existing config
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -23,7 +18,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    unoptimized: true, // required for static export
+    unoptimized: true,
   },
 };
 
