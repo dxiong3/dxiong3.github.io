@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 207 44% 96%; /* Lighter Steel Blue tint */
+    --foreground: 207 30% 25%; /* Darker Steel Blue for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 207 30% 20%; /* Darker Steel Blue on Cards */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 207 30% 20%; /* Darker Steel Blue on Popovers */
+
+    /* Steel Blue Primary */
+    --primary: 207 44% 49%; /* Steel Blue */
+    --primary-foreground: 0 0% 100%; /* White for contrast on Steel Blue */
+
+    /* Secondary derived from Steel Blue or neutral */
+    --secondary: 207 40% 90%; /* Light tint of Steel Blue */
+    --secondary-foreground: 207 40% 30%; /* Darker Steel Blue for text on light blue */
+
+    /* Light Green Accent */
+    --accent: 141 50% 58%; /* Adjusted Light Green */
+    --accent-foreground: 141 30% 20%; /* Dark Green for contrast on Light Green */
+
+    /* Muted derived from Steel Blue or neutral */
+    --muted: 207 30% 94%; /* Very Light Steel Blue/Cool Gray */
+    --muted-foreground: 207 20% 45%; /* Medium Steel Blue/Cool Gray */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 207 30% 88%; /* Lighter Steel Blue/Cool Gray Border */
+    --input: 207 30% 88%; /* Lighter Steel Blue/Cool Gray Input Background */
+    --ring: 207 44% 55%; /* Brighter Steel Blue for Ring */
+
+    --radius: 0.375rem; /* Adjusted for slightly rounded edges */
+
+    --chart-1: 207 40% 60%; /* Steel Blue shade */
+    --chart-2: 141 50% 65%; /* Green shade */
+    --chart-3: 207 40% 40%; /* Darker Steel Blue */
+    --chart-4: 141 60% 75%; /* Lighter Green */
+    --chart-5: 207 20% 55%; /* Cool Gray/Steel Blue desaturated shade */
+    
+    --sidebar-background: 207 44% 96%; 
+    --sidebar-foreground: 207 30% 25%; 
+    --sidebar-primary: 207 44% 49%; 
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 207 40% 92%; 
+    --sidebar-accent-foreground: 207 30% 25%;
+    --sidebar-border: 207 30% 88%;
+    --sidebar-ring: 207 44% 55%;
+  }
+
+  .dark {
+    /* Dark theme with Steel Blue, Light Green, and Cool Grays */
+    --background: 207 20% 12%; /* Very Dark Desaturated Steel Blue */
+    --foreground: 207 20% 92%; /* Light Cool Gray/Off-White */
+
+    --card: 207 20% 15%; /* Slightly Lighter Dark Desaturated Steel Blue */
+    --card-foreground: 207 20% 92%; /* Light Cool Gray/Off-White */
+
+    --popover: 207 20% 10%; /* Darker Popover Background */
+    --popover-foreground: 207 20% 92%; /* Light Cool Gray/Off-White */
+
+    /* Brighter Steel Blue for Dark Mode Primary */
+    --primary: 207 44% 55%; /* Brighter Steel Blue */
+    --primary-foreground: 207 30% 15%; /* Near black/dark steel blue for text on steel blue */
+
+    /* Secondary for Dark Mode */
+    --secondary: 207 40% 25%; /* Darker, desaturated Steel Blue */
+    --secondary-foreground: 207 20% 80%; /* Medium-Light Cool Gray */
+    
+    /* Light Green Accent for Dark Mode */
+    --accent: 141 50% 60%; /* Light Green that Pops */
+    --accent-foreground: 141 25% 15%; /* Very Dark Green/Black Text */
+
+    /* Muted for Dark Mode */
+    --muted: 207 20% 20%; /* Dark Desaturated Steel Blue */
+    --muted-foreground: 207 20% 65%; /* Medium Cool Gray */
+
+    --destructive: 0 70% 50%; /* Adjusted for better visibility */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 207 20% 25%; /* Dark Steel Blue/Cool Gray for borders */
+    --input: 207 20% 25%; /* Dark Steel Blue/Cool Gray for input backgrounds */
+    --ring: 207 44% 60%; /* Even Brighter Steel Blue for Ring */
+
+    --radius: 0.375rem; /* Adjusted for slightly rounded edges */
+    
+    --chart-1: 207 40% 65%; /* Steel Blue shade (dark mode) */
+    --chart-2: 141 50% 68%; /* Green shade (dark mode) */
+    --chart-3: 207 40% 50%; /* Darker Steel Blue (dark mode) */
+    --chart-4: 141 60% 80%; /* Lighter Green (dark mode) */
+    --chart-5: 207 20% 60%; /* Cool Gray/Steel Blue desaturated shade (dark mode) */
+
+    --sidebar-background: 207 20% 12%; 
+    --sidebar-foreground: 207 20% 92%; 
+    --sidebar-primary: 207 44% 55%; 
+    --sidebar-primary-foreground: 207 30% 15%; 
+    --sidebar-accent: 207 20% 18%; 
+    --sidebar-accent-foreground: 207 20% 92%;
+    --sidebar-border: 207 20% 22%; 
+    --sidebar-ring: 207 44% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
