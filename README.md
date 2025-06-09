@@ -35,5 +35,8 @@ To run the project locally:
 
 ## Hosting
 
-This project is ready to be deployed to various platforms like Vercel, Netlify, or Firebase App Hosting.
-The `apphosting.yaml` file is included for easy deployment to Firebase App Hosting.
+This project is hosted on firebase. To redeploy after making changes, do the following:
+- npm run build
+- firebase deploy
+
+If needed, check the firebase.json, package.json, or start with firebase init command.
