@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   // Required for GitHub Pages static export
   output: 'export',
   trailingSlash: true,
-  basePath: '/dxiong.github.io', // your repo name
+  basePath: '',
+  assetPrefix: '',
 
   // Keep existing config
   typescript: {
