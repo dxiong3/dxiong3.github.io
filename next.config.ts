@@ -1,7 +1,12 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Required for GitHub Pages static export
+  output: 'export',
+  trailingSlash: true,
+  basePath: '/dxiong.github.io', // your repo name
+
+  // Keep existing config
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -17,6 +22,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    unoptimized: true, // required for static export
   },
 };
 
